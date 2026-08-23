@@ -1,0 +1,6 @@
+<x-layouts::app.technician :title="__('Pekerjaan selesai')">
+    <div class="flex min-h-[calc(100dvh-10rem)] flex-col items-center justify-center py-8 text-center">
+        <div class="flex size-20 items-center justify-center rounded-full bg-success-soft text-success"><flux:icon.check class="size-10" /></div><p class="mt-6 text-sm font-semibold uppercase tracking-[0.14em] text-success">Pekerjaan selesai</p><h1 class="mt-2 text-3xl font-semibold tracking-tight text-on-surface">{{ $workOrder->number }} tersimpan</h1><p class="mt-3 max-w-sm text-base leading-7 text-on-surface-variant">Status, checklist, foto, material, dan tanda tangan sudah dikonfirmasi server.</p>
+        <div class="mt-8 grid w-full max-w-sm gap-3"><flux:button href="{{ $nextTask ? route('technician.work-orders.show', $nextTask) : route('technician.today') }}" variant="primary" icon="arrow-right" class="min-h-12" wire:navigate>{{ $nextTask ? 'Buka tugas berikutnya' : 'Kembali ke hari ini' }}</flux:button><flux:button href="{{ route('technician.tasks', ['tab' => 'history']) }}" variant="outline" class="min-h-12" wire:navigate>Lihat riwayat</flux:button></div>
+    </div>
+</x-layouts::app.technician>

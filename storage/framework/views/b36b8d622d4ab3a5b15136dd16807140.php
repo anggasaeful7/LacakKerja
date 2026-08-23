@@ -1,0 +1,132 @@
+<?php # [BlazeFolded]:{flux::button}:{D:\Documents\ChatGPT\deks\LacakKerja\apps\vendor\livewire\flux\src/../stubs/resources/views/flux/button/index.blade.php}:{1786975751} ?>
+<?php # [BlazeFolded]:{flux::button}:{D:\Documents\ChatGPT\deks\LacakKerja\apps\vendor\livewire\flux\src/../stubs/resources/views/flux/button/index.blade.php}:{1786975751} ?>
+<?php # [BlazeFolded]:{flux::button}:{D:\Documents\ChatGPT\deks\LacakKerja\apps\vendor\livewire\flux\src/../stubs/resources/views/flux/button/index.blade.php}:{1786975751} ?>
+<?php # [BlazeFolded]:{flux::button}:{D:\Documents\ChatGPT\deks\LacakKerja\apps\vendor\livewire\flux\src/../stubs/resources/views/flux/button/index.blade.php}:{1786975751} ?>
+<?php # [BlazeFolded]:{flux::main}:{D:\Documents\ChatGPT\deks\LacakKerja\apps\vendor\livewire\flux\src/../stubs/resources/views/flux/main.blade.php}:{1786975751} ?>
+<?php if (isset($component)) { $__componentOriginal23399719f391f3076fe3bf0929a84741 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal23399719f391f3076fe3bf0929a84741 = $attributes; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'f4ac99e09542ff494432bc959d4fee61::app.sidebar','data' => ['title' => __('Laporan operasional')]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component->withName('layouts::app.sidebar'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
+<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['title' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute(__('Laporan operasional'))]); ?>
+<?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::processComponentKey($component); ?>
+
+    <?php ob_start(); ?><div class="[grid-area:main] p-6 lg:p-8 [[data-flux-container]_&amp;]:px-0  min-w-0 p-4 sm:p-6 lg:p-8" data-flux-main>
+    <?php ob_start(); ?>
+        <?php ($money = fn (int $amount): string => $organization->currency.' '.number_format($amount, 0, ',', '.')); ?>
+        <div id="main-content" class="mx-auto w-full max-w-[1520px] space-y-6">
+            <header class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between"><div><p class="text-sm font-medium text-accent">Insight operasional</p><h1 class="mt-1 font-display text-3xl text-on-surface sm:text-4xl">Laporan work order</h1><p class="mt-2 max-w-2xl text-sm text-on-surface-variant">Telusuri volume, penyelesaian, SLA, dan estimasi nilai pekerjaan berdasarkan periode.</p></div><div class="flex flex-wrap gap-2"><?php ob_start(); ?><a href="<?php echo e(route('dashboard')); ?>" data-flux-button="data-flux-button" class="relative items-center font-medium justify-center gap-2 whitespace-nowrap disabled:opacity-75 dark:disabled:opacity-75 disabled:cursor-default disabled:pointer-events-none justify-center h-10 text-sm rounded-lg ps-3 pe-4 inline-flex  bg-transparent hover:bg-zinc-800/5 dark:hover:bg-white/15 text-zinc-800 dark:text-white      min-h-11">
+        <svg class="shrink-0 [:where(&amp;)]:size-4" data-flux-icon xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+  <path fill-rule="evenodd" d="M14 8a.75.75 0 0 1-.75.75H4.56l3.22 3.22a.75.75 0 1 1-1.06 1.06l-4.5-4.5a.75.75 0 0 1 0-1.06l4.5-4.5a.75.75 0 0 1 1.06 1.06L4.56 7.25h8.69A.75.75 0 0 1 14 8Z" clip-rule="evenodd"/>
+</svg>
+
+                
+                    
+            
+            <span><?php ob_start(); ?>Dashboard<?php echo trim(ob_get_clean()); ?></span>
+    </a>
+<?php echo ltrim(ob_get_clean()); ?><?php ob_start(); ?><a href="<?php echo e(route('reports.operations.export', request()->query())); ?>" data-flux-button="data-flux-button" class="relative items-center font-medium justify-center gap-2 whitespace-nowrap disabled:opacity-75 dark:disabled:opacity-75 disabled:cursor-default disabled:pointer-events-none justify-center h-10 text-sm rounded-lg ps-3 pe-4 inline-flex  bg-white hover:bg-zinc-50 dark:bg-zinc-700 dark:hover:bg-zinc-600/75 text-zinc-800 dark:text-white border border-zinc-200 hover:border-zinc-200 border-b-zinc-300/80 dark:border-zinc-600 dark:hover:border-zinc-600 shadow-xs [[data-flux-button-group]_&amp;]:border-s-0 [:is([data-flux-button-group]&gt;&amp;:first-child,_[data-flux-button-group]_:first-child&gt;&amp;)]:border-s-[1px]   min-h-11" data-flux-group-target="data-flux-group-target">
+        <svg class="shrink-0 [:where(&amp;)]:size-4" data-flux-icon xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+  <path d="M8.75 2.75a.75.75 0 0 0-1.5 0v5.69L5.03 6.22a.75.75 0 0 0-1.06 1.06l3.5 3.5a.75.75 0 0 0 1.06 0l3.5-3.5a.75.75 0 0 0-1.06-1.06L8.75 8.44V2.75Z"/>
+  <path d="M3.5 9.75a.75.75 0 0 0-1.5 0v1.5A2.75 2.75 0 0 0 4.75 14h6.5A2.75 2.75 0 0 0 14 11.25v-1.5a.75.75 0 0 0-1.5 0v1.5c0 .69-.56 1.25-1.25 1.25h-6.5c-.69 0-1.25-.56-1.25-1.25v-1.5Z"/>
+</svg>
+
+                
+                    
+            
+            <span><?php ob_start(); ?>Export CSV<?php echo trim(ob_get_clean()); ?></span>
+    </a>
+<?php echo ltrim(ob_get_clean()); ?></div></header>
+            <nav class="flex flex-wrap gap-2 border-b border-border" aria-label="Jenis laporan"><a href="<?php echo e(route('reports.operations', request()->query())); ?>" class="min-h-11 border-b-2 border-accent px-3 py-2 text-sm font-semibold text-accent">Operations</a><a href="<?php echo e(route('reports.revenue', request()->query())); ?>" class="min-h-11 px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground">Revenue & receivables</a></nav>
+            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($errors->any()): ?><div class="rounded-card border border-danger/30 bg-danger-soft px-4 py-3 text-sm text-danger" role="alert"><p class="font-semibold">Filter belum dapat diterapkan.</p><ul class="mt-1 list-disc ps-5"><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::openLoop(); ?><?php endif; ?><?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::startLoopIteration(); ?><?php endif; ?><li><?php echo e($error); ?></li><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::endLoop(); ?><?php endif; ?><?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::closeLoop(); ?><?php endif; ?></ul></div><?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+            <section class="lk-panel p-5 sm:p-6" aria-labelledby="filters-title"><div class="flex items-center justify-between gap-3"><div><h2 id="filters-title" class="text-base font-semibold text-on-surface">Filter laporan</h2><p class="mt-1 text-sm text-on-surface-variant">Periode memakai timezone <?php echo e($organization->timezone); ?>.</p></div><span class="rounded-full bg-accent-soft px-2.5 py-1 text-xs font-semibold text-accent"><?php echo e($filters['from']->locale('id')->isoFormat('D MMM YYYY')); ?> — <?php echo e($filters['to']->locale('id')->isoFormat('D MMM YYYY')); ?></span></div><form method="GET" class="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-5"><div><label for="from" class="mb-2 block text-sm font-medium text-on-surface">Dari</label><input id="from" name="from" type="date" value="<?php echo e($filters['from']->toDateString()); ?>" class="h-11 w-full rounded-control border border-border bg-surface px-3 text-sm text-foreground focus:border-ring focus:outline-none focus:ring-2 focus:ring-ring/30" /></div><div><label for="to" class="mb-2 block text-sm font-medium text-on-surface">Sampai</label><input id="to" name="to" type="date" value="<?php echo e($filters['to']->toDateString()); ?>" class="h-11 w-full rounded-control border border-border bg-surface px-3 text-sm text-foreground focus:border-ring focus:outline-none focus:ring-2 focus:ring-ring/30" /></div><div><label for="status" class="mb-2 block text-sm font-medium text-on-surface">Status</label><select id="status" name="status" class="h-11 w-full rounded-control border border-border bg-surface px-3 text-sm text-foreground focus:border-ring focus:outline-none focus:ring-2 focus:ring-ring/30"><option value="">Semua status</option><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::openLoop(); ?><?php endif; ?><?php $__currentLoopData = \App\Enums\WorkOrderStatus::cases(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $status): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::startLoopIteration(); ?><?php endif; ?><option value="<?php echo e($status->value); ?>" <?php if($filters['status'] === $status->value): echo 'selected'; endif; ?>><?php echo e($status->label()); ?></option><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::endLoop(); ?><?php endif; ?><?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::closeLoop(); ?><?php endif; ?></select></div><div><label for="priority" class="mb-2 block text-sm font-medium text-on-surface">Prioritas</label><select id="priority" name="priority" class="h-11 w-full rounded-control border border-border bg-surface px-3 text-sm text-foreground focus:border-ring focus:outline-none focus:ring-2 focus:ring-ring/30"><option value="">Semua prioritas</option><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::openLoop(); ?><?php endif; ?><?php $__currentLoopData = \App\Enums\WorkOrderPriority::cases(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $priority): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::startLoopIteration(); ?><?php endif; ?><option value="<?php echo e($priority->value); ?>" <?php if($filters['priority'] === $priority->value): echo 'selected'; endif; ?>><?php echo e($priority->label()); ?></option><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::endLoop(); ?><?php endif; ?><?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::closeLoop(); ?><?php endif; ?></select></div><div class="flex items-end"><?php ob_start(); ?><button type="submit" class="relative items-center font-medium justify-center gap-2 whitespace-nowrap disabled:opacity-75 dark:disabled:opacity-75 disabled:cursor-default disabled:pointer-events-none justify-center h-10 text-sm rounded-lg ps-3 pe-4 inline-flex  bg-[var(--color-accent)] hover:bg-[color-mix(in_oklab,_var(--color-accent),_transparent_10%)] text-[var(--color-accent-foreground)] border border-black/10 dark:border-0 shadow-[inset_0px_1px_--theme(--color-white/.2)] [[data-flux-button-group]_&amp;]:border-e-0 [:is([data-flux-button-group]&gt;&amp;:last-child,_[data-flux-button-group]_:last-child&gt;&amp;)]:border-e-[1px] dark:[:is([data-flux-button-group]&gt;&amp;:last-child,_[data-flux-button-group]_:last-child&gt;&amp;)]:border-e-0 dark:[:is([data-flux-button-group]&gt;&amp;:last-child,_[data-flux-button-group]_:last-child&gt;&amp;)]:border-s-[1px] [:is([data-flux-button-group]&gt;&amp;:not(:first-child),_[data-flux-button-group]_:not(:first-child)&gt;&amp;)]:border-s-[color-mix(in_srgb,var(--color-accent-foreground),transparent_85%)] *:transition-opacity [&amp;[disabled]&gt;:not([data-flux-loading-indicator])]:opacity-0 [&amp;[disabled]&gt;[data-flux-loading-indicator]]:opacity-100 [&amp;[disabled]]:pointer-events-none  min-h-11 w-full" data-flux-button="data-flux-button" data-flux-group-target="data-flux-group-target">
+        <div class="absolute inset-0 flex items-center justify-center opacity-0" data-flux-loading-indicator>
+                <svg class="shrink-0 [:where(&amp;)]:size-4 animate-spin" data-flux-icon xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true" data-slot="icon">
+    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+</svg>
+                    </div>
+        
+                    <svg class="shrink-0 [:where(&amp;)]:size-4" data-flux-icon xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+  <path d="M14 2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v2.172a2 2 0 0 0 .586 1.414l2.828 2.828A2 2 0 0 1 6 9.828v4.363a.5.5 0 0 0 .724.447l2.17-1.085A2 2 0 0 0 10 11.763V9.829a2 2 0 0 1 .586-1.414l2.828-2.828A2 2 0 0 0 14 4.172V2Z"/>
+</svg>
+
+                
+                    
+            
+            <span><?php ob_start(); ?>Terapkan<?php echo trim(ob_get_clean()); ?></span>
+    </button>
+<?php echo ltrim(ob_get_clean()); ?></div></form></section>
+            <section aria-labelledby="summary-title"><h2 id="summary-title" class="sr-only">Ringkasan laporan</h2><div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4"><div class="lk-card p-5"><p class="text-xs font-medium uppercase tracking-wide text-muted-foreground">Total work order</p><p class="mt-2 text-2xl font-semibold tabular-nums text-on-surface"><?php echo e(number_format($summary['total'], 0, ',', '.')); ?></p><p class="mt-1 text-sm text-muted-foreground">Dibuat dalam periode</p></div><div class="lk-card p-5"><p class="text-xs font-medium uppercase tracking-wide text-muted-foreground">Selesai</p><p class="mt-2 text-2xl font-semibold tabular-nums text-success"><?php echo e(number_format($summary['completed'], 0, ',', '.')); ?></p><p class="mt-1 text-sm text-muted-foreground"><?php echo e($summary['total'] > 0 ? round(($summary['completed'] / $summary['total']) * 100) : 0); ?>% completion rate</p></div><div class="lk-card border-danger/25 p-5"><p class="text-xs font-medium uppercase tracking-wide text-muted-foreground">Overdue</p><p class="mt-2 text-2xl font-semibold tabular-nums text-danger"><?php echo e(number_format($summary['overdue'], 0, ',', '.')); ?></p><p class="mt-1 text-sm text-muted-foreground">Perlu follow-up SLA</p></div><div class="lk-card p-5"><p class="text-xs font-medium uppercase tracking-wide text-muted-foreground">Estimasi nilai</p><p class="mt-2 text-2xl font-semibold tabular-nums text-on-surface"><?php echo e($money($summary['estimated_total'])); ?></p><p class="mt-1 text-sm text-muted-foreground">Akumulasi work order</p></div></div></section>
+            <section class="lk-card overflow-hidden" aria-labelledby="table-title"><div class="border-b border-border px-5 py-4 sm:px-6"><h2 id="table-title" class="text-lg font-semibold text-on-surface">Work order dalam periode</h2><p class="mt-1 text-sm text-on-surface-variant"><?php echo e($workOrders->total()); ?> baris · Klik nomor untuk membuka detail.</p></div><div class="overflow-x-auto"><table class="min-w-[980px] w-full text-sm"><caption class="sr-only">Daftar work order laporan operasional</caption><thead class="bg-surface-subtle text-left text-xs uppercase tracking-wide text-muted-foreground"><tr><th class="px-5 py-3 font-medium">Work order</th><th class="px-5 py-3 font-medium">Pelanggan</th><th class="px-5 py-3 font-medium">Teknisi</th><th class="px-5 py-3 font-medium">Status</th><th class="px-5 py-3 font-medium">Jadwal</th><th class="px-5 py-3 text-right font-medium">Estimasi</th></tr></thead><tbody class="divide-y divide-border"><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::openLoop(); ?><?php endif; ?><?php $__empty_1 = true; $__currentLoopData = $workOrders; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $workOrder): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::startLoopIteration(); ?><?php endif; ?><tr class="hover:bg-surface-subtle/60"><td class="px-5 py-4"><a href="<?php echo e(route('work-orders.show', $workOrder)); ?>" class="font-semibold text-accent hover:underline"><?php echo e($workOrder->number); ?></a><p class="mt-1 max-w-xs truncate text-xs text-muted-foreground"><?php echo e($workOrder->title); ?></p></td><td class="px-5 py-4 text-on-surface"><?php echo e($workOrder->customer?->name ?? '—'); ?><p class="mt-1 text-xs text-muted-foreground"><?php echo e($workOrder->site?->city ?? 'Lokasi belum diisi'); ?></p></td><td class="px-5 py-4 text-on-surface"><?php echo e($workOrder->primaryAssignment?->user?->name ?? 'Belum ditugaskan'); ?></td><td class="px-5 py-4"><?php if (isset($component)) { $__componentOriginal3fd872b7fd21dc9020e78faa7528b9be = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal3fd872b7fd21dc9020e78faa7528b9be = $attributes; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.lk-status-badge','data' => ['status' => $workOrder->status->value]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component->withName('lk-status-badge'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
+<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['status' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($workOrder->status->value)]); ?>
+<?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::processComponentKey($component); ?>
+
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginal3fd872b7fd21dc9020e78faa7528b9be)): ?>
+<?php $attributes = $__attributesOriginal3fd872b7fd21dc9020e78faa7528b9be; ?>
+<?php unset($__attributesOriginal3fd872b7fd21dc9020e78faa7528b9be); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal3fd872b7fd21dc9020e78faa7528b9be)): ?>
+<?php $component = $__componentOriginal3fd872b7fd21dc9020e78faa7528b9be; ?>
+<?php unset($__componentOriginal3fd872b7fd21dc9020e78faa7528b9be); ?>
+<?php endif; ?><p class="mt-1 text-xs text-muted-foreground"><?php echo e($workOrder->priority->label()); ?></p></td><td class="whitespace-nowrap px-5 py-4 text-muted-foreground"><?php echo e($workOrder->scheduled_start?->locale('id')->isoFormat('D MMM YYYY HH:mm') ?? 'Belum dijadwalkan'); ?></td><td class="whitespace-nowrap px-5 py-4 text-right font-semibold tabular-nums text-on-surface"><?php echo e($money((int) $workOrder->estimated_total)); ?></td></tr><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::endLoop(); ?><?php endif; ?><?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::closeLoop(); ?><?php endif; ?><tr><td colspan="6" class="p-5"><?php if (isset($component)) { $__componentOriginal1638cc9c9bed71d4fca242bbe3acaef4 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal1638cc9c9bed71d4fca242bbe3acaef4 = $attributes; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.lk-empty-state','data' => ['icon' => 'clipboard-document-list','title' => 'Tidak ada work order','description' => 'Perluas periode atau hapus filter untuk melihat data lainnya.']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component->withName('lk-empty-state'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
+<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['icon' => 'clipboard-document-list','title' => 'Tidak ada work order','description' => 'Perluas periode atau hapus filter untuk melihat data lainnya.']); ?>
+<?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::processComponentKey($component); ?>
+<?php ob_start(); ?><a href="<?php echo e(route('work-orders.create')); ?>" data-flux-button="data-flux-button" class="relative items-center font-medium justify-center gap-2 whitespace-nowrap disabled:opacity-75 dark:disabled:opacity-75 disabled:cursor-default disabled:pointer-events-none justify-center h-10 text-sm rounded-lg ps-3 pe-4 inline-flex  bg-[var(--color-accent)] hover:bg-[color-mix(in_oklab,_var(--color-accent),_transparent_10%)] text-[var(--color-accent-foreground)] border border-black/10 dark:border-0 shadow-[inset_0px_1px_--theme(--color-white/.2)] [[data-flux-button-group]_&amp;]:border-e-0 [:is([data-flux-button-group]&gt;&amp;:last-child,_[data-flux-button-group]_:last-child&gt;&amp;)]:border-e-[1px] dark:[:is([data-flux-button-group]&gt;&amp;:last-child,_[data-flux-button-group]_:last-child&gt;&amp;)]:border-e-0 dark:[:is([data-flux-button-group]&gt;&amp;:last-child,_[data-flux-button-group]_:last-child&gt;&amp;)]:border-s-[1px] [:is([data-flux-button-group]&gt;&amp;:not(:first-child),_[data-flux-button-group]_:not(:first-child)&gt;&amp;)]:border-s-[color-mix(in_srgb,var(--color-accent-foreground),transparent_85%)]   min-h-11" data-flux-group-target="data-flux-group-target">
+        <svg class="shrink-0 [:where(&amp;)]:size-4" data-flux-icon xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+  <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z"/>
+</svg>
+
+                
+                    
+            
+            <span><?php ob_start(); ?>Buat work order<?php echo trim(ob_get_clean()); ?></span>
+    </a>
+<?php echo ltrim(ob_get_clean()); ?> <?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginal1638cc9c9bed71d4fca242bbe3acaef4)): ?>
+<?php $attributes = $__attributesOriginal1638cc9c9bed71d4fca242bbe3acaef4; ?>
+<?php unset($__attributesOriginal1638cc9c9bed71d4fca242bbe3acaef4); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal1638cc9c9bed71d4fca242bbe3acaef4)): ?>
+<?php $component = $__componentOriginal1638cc9c9bed71d4fca242bbe3acaef4; ?>
+<?php unset($__componentOriginal1638cc9c9bed71d4fca242bbe3acaef4); ?>
+<?php endif; ?></td></tr><?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?></tbody></table></div><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($workOrders->hasPages()): ?><div class="border-t border-border px-5 py-4 sm:px-6"><?php echo e($workOrders->links()); ?></div><?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?></section>
+        </div>
+    <?php echo trim(ob_get_clean()); ?>
+
+</div>
+<?php echo ltrim(ob_get_clean()); ?>
+ <?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginal23399719f391f3076fe3bf0929a84741)): ?>
+<?php $attributes = $__attributesOriginal23399719f391f3076fe3bf0929a84741; ?>
+<?php unset($__attributesOriginal23399719f391f3076fe3bf0929a84741); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal23399719f391f3076fe3bf0929a84741)): ?>
+<?php $component = $__componentOriginal23399719f391f3076fe3bf0929a84741; ?>
+<?php unset($__componentOriginal23399719f391f3076fe3bf0929a84741); ?>
+<?php endif; ?>
+<?php /**PATH D:\Documents\ChatGPT\deks\LacakKerja\apps\resources\views/pages/reports/operations.blade.php ENDPATH**/ ?>

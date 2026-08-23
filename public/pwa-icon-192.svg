@@ -1,0 +1,8 @@
+<svg width="192" height="192" viewBox="0 0 166 166" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+    <title id="title">LacakKerja</title>
+    <desc id="desc">LacakKerja operational route mark</desc>
+    <rect width="166" height="166" rx="38" fill="#0F172A"/>
+    <path d="M47 43H119V70H74V91H108V116H74V137H47V43Z" fill="#38BDF8"/>
+    <path d="M103 40L122 40L92 126L73 126L103 40Z" fill="#FFFFFF"/>
+    <circle cx="122" cy="43" r="9" fill="#22C55E"/>
+</svg>

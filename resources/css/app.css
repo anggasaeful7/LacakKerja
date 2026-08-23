@@ -1,0 +1,177 @@
+@import 'tailwindcss';
+@import '../../vendor/livewire/flux/dist/flux.css';
+
+@source '../views';
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../vendor/livewire/flux-pro/stubs/**/*.blade.php';
+@source '../../vendor/livewire/flux/stubs/**/*.blade.php';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --font-sans: 'Inter', 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Calistoga', Georgia, ui-serif, serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+    --color-primary: #0f172a;
+    --color-on-primary: #ffffff;
+    --color-primary-container: #131b2e;
+    --color-secondary: #334155;
+    --color-accent: #0369a1;
+    --color-accent-content: #075985;
+    --color-accent-foreground: #ffffff;
+    --color-accent-hover: #075985;
+    --color-accent-soft: #e0f2fe;
+    --color-background: #f8fafc;
+    --color-surface: #ffffff;
+    --color-surface-subtle: #f1f5f9;
+    --color-foreground: #020617;
+    --color-on-surface: #0b1c30;
+    --color-on-surface-variant: #475569;
+    --color-muted: #e8ecf1;
+    --color-muted-foreground: #64748b;
+    --color-border: #e2e8f0;
+    --color-border-strong: #cbd5e1;
+    --color-success: #15803d;
+    --color-success-soft: #dcfce7;
+    --color-warning: #b45309;
+    --color-warning-soft: #fef3c7;
+    --color-danger: #dc2626;
+    --color-danger-soft: #fee2e2;
+    --color-info: #0369a1;
+    --color-info-soft: #e0f2fe;
+    --color-ring: #0284c7;
+
+    --radius-control: 0.5rem;
+    --radius-card: 0.75rem;
+    --radius-panel: 1rem;
+    --shadow-card: 0 1px 2px 0 rgb(15 23 42 / 0.04), 0 8px 24px -18px rgb(15 23 42 / 0.22);
+    --shadow-popover: 0 12px 32px -16px rgb(15 23 42 / 0.28);
+    --shadow-modal: 0 24px 64px -24px rgb(15 23 42 / 0.4);
+}
+
+@layer theme {
+    .dark {
+        color-scheme: dark;
+        --color-background: #0b1220;
+        --color-surface: #111c2e;
+        --color-surface-subtle: #162338;
+        --color-foreground: #f8fafc;
+        --color-on-surface: #f8fafc;
+        --color-on-surface-variant: #cbd5e1;
+        --color-muted: #24334a;
+        --color-muted-foreground: #94a3b8;
+        --color-border: #2b3c54;
+        --color-border-strong: #3b4d67;
+        --color-accent-soft: #123d5b;
+        --color-accent-content: #bae6fd;
+        --color-accent-foreground: #ffffff;
+        --color-success-soft: #123d2a;
+        --color-warning-soft: #4a3412;
+        --color-danger-soft: #4b1d24;
+        --color-info-soft: #123d5b;
+    }
+}
+
+@layer base {
+    :root {
+        color-scheme: light;
+    }
+
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-border);
+    }
+
+    html {
+        min-width: 320px;
+        scroll-behavior: smooth;
+    }
+
+    body {
+        min-height: 100dvh;
+        background: var(--color-background);
+        color: var(--color-foreground);
+        font-family: var(--font-sans);
+        font-size: 1rem;
+        line-height: 1.5;
+        text-rendering: optimizeLegibility;
+    }
+
+    button,
+    a,
+    [role='button'] {
+        touch-action: manipulation;
+    }
+
+    :focus-visible {
+        outline: 2px solid var(--color-ring);
+        outline-offset: 2px;
+    }
+
+    ::selection {
+        background: color-mix(in srgb, var(--color-accent) 22%, transparent);
+    }
+}
+
+@layer components {
+    .lk-card {
+        @apply rounded-card border border-border bg-surface shadow-card;
+    }
+
+    .lk-panel {
+        @apply rounded-panel border border-border bg-surface shadow-card;
+    }
+
+    .lk-muted {
+        color: var(--color-on-surface-variant);
+    }
+
+    .lk-safe-bottom {
+        padding-bottom: max(1rem, env(safe-area-inset-bottom));
+    }
+
+    .lk-number {
+        font-variant-numeric: tabular-nums;
+    }
+
+    .lk-clickable {
+        @apply cursor-pointer transition duration-200 ease-out;
+    }
+
+    .lk-clickable:hover {
+        @apply -translate-y-px shadow-card;
+    }
+
+    .lk-clickable:active {
+        transform: translateY(0) scale(0.99);
+    }
+}
+
+[data-flux-field]:not(ui-radio, ui-checkbox) {
+    @apply grid gap-2;
+}
+
+[data-flux-label] {
+    @apply !mb-0 !leading-tight;
+}
+
+input:focus[data-flux-control],
+textarea:focus[data-flux-control],
+select:focus[data-flux-control] {
+    @apply outline-hidden ring-2 ring-ring ring-offset-2 ring-offset-background;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

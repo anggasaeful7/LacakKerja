@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0F172A">
+    <title>LacakKerja · Offline</title>
+    <style>
+        :root { color-scheme: light; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f8fafc; color: #0f172a; }
+        * { box-sizing: border-box; }
+        body { margin: 0; min-height: 100dvh; background: #f8fafc; }
+        main { width: min(100% - 32px, 680px); margin: 0 auto; padding: 48px 0 calc(48px + env(safe-area-inset-bottom)); }
+        .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: -.02em; }
+        .brand img { width: 40px; height: 40px; border-radius: 12px; }
+        .panel { margin-top: 32px; padding: 24px; border: 1px solid #dbe3ee; border-radius: 20px; background: #fff; box-shadow: 0 10px 24px rgb(15 23 42 / .06); }
+        h1 { margin: 0; font-size: clamp(1.65rem, 5vw, 2.4rem); line-height: 1.1; }
+        p { color: #475569; line-height: 1.6; }
+        .status { display: inline-flex; min-height: 40px; align-items: center; gap: 8px; padding: 0 12px; border-radius: 999px; background: #fef3c7; color: #92400e; font-size: .875rem; font-weight: 650; }
+        button { min-height: 48px; padding: 0 16px; border: 0; border-radius: 12px; background: #0878b1; color: #fff; font: inherit; font-weight: 700; cursor: pointer; }
+        button:focus-visible { outline: 3px solid #38bdf8; outline-offset: 3px; }
+        .tasks { display: grid; gap: 12px; margin: 18px 0 0; padding: 0; list-style: none; }
+        .task { padding: 14px; border: 1px solid #dbe3ee; border-radius: 14px; }
+        .task strong { display: block; }
+        .task small { display: block; margin-top: 4px; color: #64748b; }
+        .muted { color: #64748b; font-size: .9rem; }
+    </style>
+</head>
+<body>
+<main>
+    <div class="brand"><img src="/favicon.svg" alt=""><span>LacakKerja</span></div>
+    <section class="panel" aria-labelledby="offline-title">
+        <span class="status" role="status">Tidak ada koneksi</span>
+        <h1 id="offline-title" style="margin-top:20px">Mode offline aktif</h1>
+        <p>Perubahan checklist dan catatan akan disimpan di perangkat lalu dikirim saat koneksi kembali.</p>
+        <button type="button" id="retry">Coba lagi</button>
+        <div id="cached" aria-live="polite"></div>
+    </section>
+</main>
+<script>
+(function () {
+    const retry = document.getElementById('retry');
+    retry.addEventListener('click', function () { window.location.reload(); });
+    const output = document.getElementById('cached');
+    if (!('indexedDB' in window)) {
+        output.innerHTML = '<p class="muted">Data tugas tersimpan lokal belum dapat dibaca browser ini.</p>';
+        return;
+    }
+    const request = indexedDB.open('lacakkerja-offline-v1', 2);
+    request.onsuccess = function () {
+        const db = request.result;
+        const transaction = db.transaction('work_orders', 'readonly');
+        const store = transaction.objectStore('work_orders');
+        const getAll = store.getAll();
+        getAll.onsuccess = function () {
+            const tasks = getAll.result || [];
+            if (!tasks.length) {
+                output.innerHTML = '<p class="muted">Belum ada tugas yang pernah dibuka di perangkat ini.</p>';
+                return;
+            }
+            const list = document.createElement('ul');
+            list.className = 'tasks';
+            tasks.slice(0, 10).forEach(function (record) {
+                const item = document.createElement('li');
+                item.className = 'task';
+                const title = document.createElement('strong');
+                title.textContent = (record.work_order.number || 'Tugas') + ' · ' + (record.work_order.title || '');
+                const detail = document.createElement('small');
+                detail.textContent = (record.work_order.customer?.name || 'Pelanggan') + ' · Status ' + (record.work_order.status || 'tersimpan');
+                item.append(title, detail);
+                list.append(item);
+            });
+            output.innerHTML = '<p class="muted" style="margin-top:24px">Tugas terakhir yang tersimpan:</p>';
+            output.append(list);
+        };
+    };
+}());
+</script>
+</body>
+</html>

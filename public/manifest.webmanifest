@@ -1,0 +1,27 @@
+{
+    "id": "/technician/today",
+    "name": "LacakKerja Teknisi",
+    "short_name": "LacakKerja",
+    "description": "Workspace teknisi untuk menjalankan pekerjaan lapangan dengan aman saat jaringan tidak stabil.",
+    "start_url": "/technician/today",
+    "scope": "/",
+    "display": "standalone",
+    "background_color": "#F8FAFC",
+    "theme_color": "#0F172A",
+    "lang": "id-ID",
+    "dir": "ltr",
+    "icons": [
+        {
+            "src": "/pwa-icon-192.svg",
+            "sizes": "192x192",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/pwa-icon-512.svg",
+            "sizes": "512x512",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        }
+    ]
+}
